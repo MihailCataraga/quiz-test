@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lucrul cu datele pe front-end</title>
+    </head>
+    <body>
+        <script>
+            var json = '{"quiz":{"q1":{"question":"Which one is correct team name in NBA?","options":["New York Bulls","Los Angeles Kings","Golden State Warriros","Huston Rocket"],"answer":"Huston Rocket"},"q2":{"question":"\'Namaste\' is a traditional greeting in which Asian language?","options":["Hindi","Mandarin","Nepalese","Thai"],"answer":"Hindi"},"q3":{"question":"The Spree river flows through which major European capital city?","options":["Berlin","Paris","Rome","London"],"answer":"Berlin"},"q4":{"question":"Which famous artist had both a \'Rose Period\' and a \'Blue Period\'?","options":["Pablo Picasso","Vincent van Gogh","Salvador Dalí","Edgar Degas"],"answer":"Pablo Picasso"}}}'; 
+            var data = JSON.parse(json);
+            document.body.innerHTML +=
+            '<h2> Question 1: ' + data.quiz.q1.question + '</h2>' +
+            '<input onclick="myFunction0()" type="radio" name="answer_1" value="New York Bulls" id="a0">' + data.quiz.q1.options[0] +
+            '<br><input onclick="myFunction0()" type="radio" name="answer_1" value="Los Angeles Kings" id="a1">' + data.quiz.q1.options[1] +
+            '<br><input onclick="myFunction0()" type="radio" name="answer_1" value="Golden State Warriros" id="a2">' + data.quiz.q1.options[2] +
+            '<br><input onclick="myFunction0()" type="radio" name="answer_1" value="Huston Rocket" id="a3">' + data.quiz.q1.options[3] + 
+            '<h2> Question 2: ' + data.quiz.q2.question + '</h2>' +
+            '<input onclick="myFunction1()" type="radio" name="answer_2" value="Hindi" id="b0">' + data.quiz.q2.options[0] +
+            '<br><input onclick="myFunction1()" type="radio" name="answer_2" value="Mandarin" id="b1">' + data.quiz.q2.options[1] +
+            '<br><input onclick="myFunction1()" type="radio" name="answer_2" value="Nepalese" id="b2">' + data.quiz.q2.options[2] +
+            '<br><input onclick="myFunction1()" type="radio" name="answer_2" value="London" id="b3">' + data.quiz.q3.options[3] + 
+            '<h2> Question 3: ' + data.quiz.q3.question + '</h2>' +
+            '<input onclick="myFunction2()" type="radio" name="answer_3" value="Berlin" id="c0">' + data.quiz.q3.options[0] +
+            '<br><input onclick="myFunction2()" type="radio" name="answer_3" value="Paris" id="c1">' + data.quiz.q3.options[1] +
+            '<br><input onclick="myFunction2()" type="radio" name="answer_3" value="Rome" id="c2">' + data.quiz.q3.options[2] +
+            '<br><input onclick="myFunction2()" type="radio" name="answer_3" value="London" id="c3">' + data.quiz.q3.options[3] +
+            '<h2> Question 4: ' + data.quiz.q4.question + '</h2>' +
+            '<input onclick="myFunction3()"  type="radio" name="answer_4" value="Pablo Picasso" id="d0">' + data.quiz.q4.options[0] +
+            '<br><input onclick="myFunction3()" type="radio" name="answer_4" value="Vincent van Gogh" id="d1">' + data.quiz.q4.options[1] +
+            '<br><input onclick="myFunction3()" type="radio" name="answer_4" value="Salvador Dalí" id="d2">' + data.quiz.q4.options[2] +
+            '<br><input onclick="myFunction3()" type="radio" name="answer_4" value="Edgar Degas" id="d3">' + data.quiz.q4.options[3]
+            var value;
+            if (value = localStorage.getItem('answer 1')) {
+                if (document.getElementById("a0").value == value) {
+                    var anchor = document.getElementById("a0");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("a1").value == value) {
+                    var anchor = document.getElementById("a1");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("a2").value == value) {
+                    var anchor = document.getElementById("a2");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("a3").value == value) {
+                    var anchor = document.getElementById("a3");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                };
+            };
+            if (value = localStorage.getItem('answer 2')) {
+                if (document.getElementById("b0").value == value) {
+                    var anchor = document.getElementById("b0");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("b1").value == value) {
+                    var anchor = document.getElementById("b1");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("b2").value == value) {
+                    var anchor = document.getElementById("b2");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("b3").value == value) {
+                    var anchor = document.getElementById("b3");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                };
+            };
+            if (value = localStorage.getItem('answer 3')) {
+                if (document.getElementById("c0").value == value) {
+                    var anchor = document.getElementById("c0");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("c1").value == value) {
+                    var anchor = document.getElementById("c1");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("c2").value == value) {
+                    var anchor = document.getElementById("c2");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("c3").value == value) {
+                    var anchor = document.getElementById("c3");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                    };
+            };
+            if (value = localStorage.getItem('answer 4')) {
+                if (document.getElementById("d0").value == value) {
+                    var anchor = document.getElementById("d0");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("d1").value == value) {
+                    var anchor = document.getElementById("d1");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("d2").value == value) {
+                    var anchor = document.getElementById("d2");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                } else if (document.getElementById("d3").value == value) {
+                    var anchor = document.getElementById("d3");
+                    var att = document.createAttribute("checked");
+                    anchor.setAttributeNode(att);
+                };
+            };
+            function myFunction0() {
+                var value;
+                if (document.getElementById("a0").checked) {
+                    value = document.getElementById("a0").value;
+                    localStorage.setItem('answer 1', value);
+                } else if (document.getElementById("a1").checked) {
+                    value = document.getElementById("a1").value;
+                    localStorage.setItem('answer 1', value);
+                } else if (document.getElementById("a2").checked) {
+                    value = document.getElementById("a2").value;
+                    localStorage.setItem('answer 1', value);
+                } else if (document.getElementById("a3").checked) {
+                    value = document.getElementById("a3").value;
+                    localStorage.setItem('answer 1', value);
+                };
+            };
+            function myFunction1() {
+                var value;
+                if (document.getElementById("b0").checked) {
+                    value = document.getElementById("b0").value;
+                    localStorage.setItem('answer 2', value);
+                } else if (document.getElementById("b1").checked) {
+                    value = document.getElementById("b1").value;
+                    localStorage.setItem('answer 2', value);
+                } else if (document.getElementById("b2").checked) {
+                    value = document.getElementById("b2").value;
+                    localStorage.setItem('answer 2', value);
+                } else if (document.getElementById("b3").checked) {
+                    value = document.getElementById("b3").value;
+                    localStorage.setItem('answer 2', value);
+                };
+            };
+            function myFunction2() {
+                var value;
+                if (document.getElementById("c0").checked) {
+                    value = document.getElementById("c0").value;
+                    localStorage.setItem('answer 3', value);
+                } else if (document.getElementById("c1").checked) {
+                    value = document.getElementById("c1").value;
+                    localStorage.setItem('answer 3', value);
+                } else if (document.getElementById("c2").checked) {
+                    value = document.getElementById("c2").value;
+                    localStorage.setItem('answer 3', value);
+                } else if (document.getElementById("c3").checked) {
+                    value = document.getElementById("c3").value;
+                    localStorage.setItem('answer 3', value);
+                }; 
+            };
+            function myFunction3() {
+                var value;
+                if (document.getElementById("d0").checked) {
+                    value = document.getElementById("d0").value;
+                    localStorage.setItem('answer 4', value);
+                } else if (document.getElementById("d1").checked) {
+                    value = document.getElementById("d1").value;
+                    localStorage.setItem('answer 4', value);
+                } else if (document.getElementById("d2").checked) {
+                    value = document.getElementById("d2").value;
+                    localStorage.setItem('answer 4', value);
+                } else if (document.getElementById("d3").checked) {
+                    value = document.getElementById("d3").value;
+                    localStorage.setItem('answer 4', value);
+                }; 
+            };
+        </script>
+    </body>
+</html>
